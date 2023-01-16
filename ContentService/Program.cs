@@ -11,7 +11,9 @@ builder.Services.AddDbContext<ApplicationContext>(options =>
         )
 );
 
-builder.Services.AddScoped(typeof(IDataContent<Category>), typeof(CategoryData));
+builder.Services.AddScoped(typeof(IDataContent<Category>), typeof(ExecuteCategoryData));
+builder.Services.AddScoped(typeof(IDataContent<PopularProduct>), typeof(ExecuteProductData));
+
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

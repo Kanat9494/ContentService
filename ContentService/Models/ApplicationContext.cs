@@ -8,4 +8,6 @@ public class ApplicationContext : DbContext
     }
 
     public DbSet<Category> Categories { get; set; }
+
+    public DbSet<PopularProduct> PopularProducts { get; set; }
 }

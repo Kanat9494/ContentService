@@ -1,10 +1,10 @@
 ﻿namespace ContentService.Data.Repositories;
 
-public class CategoryData : IDataContent<Category>
+public class ExecuteCategoryData : IDataContent<Category>
 {
     private readonly ApplicationContext _context;
 
-    public CategoryData(ApplicationContext context)
+    public ExecuteCategoryData(ApplicationContext context)
     {
         _context = context;
     }

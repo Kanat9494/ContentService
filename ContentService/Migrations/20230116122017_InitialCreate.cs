@@ -22,6 +22,21 @@ namespace ContentService.Migrations
                 {
                     table.PrimaryKey("PK_Categories", x => x.CategoryId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "PopularProducts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    ImageId = table.Column<int>(type: "int", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PopularProducts", x => x.Id);
+                });
         }
 
         /// <inheritdoc />
@@ -29,6 +44,9 @@ namespace ContentService.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "PopularProducts");
         }
     }
 }
