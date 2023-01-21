@@ -10,6 +10,6 @@ public class ExecuteCategoryData : IDataContent<Category>
     }
     public async Task<IEnumerable<Category>> GetItemsAsync()
     {
-        return await _context.Categories.ToListAsync();
+        return await _context.Categories.OrderBy(x => x.CategoryName).ToListAsync();
     }
 }
