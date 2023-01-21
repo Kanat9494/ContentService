@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ContentService.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20230116124122_Changing popular product model")]
-    partial class Changingpopularproductmodel
+    [Migration("20230116142240_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

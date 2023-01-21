@@ -10,6 +10,6 @@ public class ExecuteProductData : IDataContent<PopularProduct>
     }
     public async Task<IEnumerable<PopularProduct>> GetItemsAsync()
     {
-        return await _context.PopularProducts.ToListAsync();
+        return await _context.PopularProducts.OrderBy(x => x.ProductName).ToListAsync();
     }
 }
